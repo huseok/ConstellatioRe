@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/main_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bgyellow"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/main_rg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/bgyellow">
+
+        <RadioButton
+            android:id="@+id/main_rb_star"
+            style="@style/main_rb"
+            android:drawableTop="@drawable/main_rb_star"
+            android:checked="true"
+            android:text="@string/label_star" />
+
+        <RadioButton
+            android:id="@+id/main_rb_parent"
+            style="@style/main_rb"
+            android:checked="false"
+            android:drawableTop="@drawable/main_rb_parnter"
+            android:text="@string/label_parnter" />
+
+        <RadioButton
+            android:id="@+id/main_rb_luck"
+            style="@style/main_rb"
+            android:checked="false"
+            android:drawableTop="@drawable/main_rb_luck"
+            android:text="@string/label_luck" />
+
+        <RadioButton
+            android:id="@+id/main_rb_me"
+            style="@style/main_rb"
+            android:checked="false"
+            android:drawableTop="@drawable/main_rb_me"
+            android:text="@string/label_me" />
+
+    </RadioGroup>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/main_layout_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_rg"
+        android:layout_below="@+id/main_tv_title" />
+
+</RelativeLayout>
