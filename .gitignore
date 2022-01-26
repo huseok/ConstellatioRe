@@ -9,3 +9,4 @@
 .externalNativeBuild
 /app/version.properties
 
+/app/release/
